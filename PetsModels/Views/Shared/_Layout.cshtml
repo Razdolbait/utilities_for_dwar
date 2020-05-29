@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142769140-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-142769140-1', { 'optimize_id': 'GTM-WB9MPGN' });
+	</script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-PQ4T244');</script>
+	<!-- End Google Tag Manager -->
+	<meta charset="utf-8" />
+	@RenderSection("metatags", false)
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title</title>
+	<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+	<script src="~/Scripts/modernizr-2.8.3.js"></script>
+	<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+	<script src="~/Scripts/bootstrap.min.js"></script>
+	<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+	<!--<script type="text/javascript" src="~/Scripts/1554369527"></script>-->
+</head>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ4T244"
+				height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="container-fluid">
+		<div class="row" style="height:50px">
+			<div class="col-xl-12"></div>
+		</div>
+		<div class="row">
+			<div class="col-xl-12 pl-5 pr-5">
+				<div class="row">
+					<div class="col-xl-2 mb-4">
+						<ul class="nav nav-tabs flex-column">
+							<li class="nav-header">Навигация</li>
+							<li class="nav-item">@Html.ActionLink("Дварограмма", "Index", "Anagramma")</li>
+							<li class="nav-item">@Html.ActionLink("Рейтинг питомцев", "Index", "Pets")</li>
+							<li class="nav-item">@Html.ActionLink("Примерочная", "Index", "DressingRoom")</li>
+							<li class="nav-item">@Html.ActionLink("Сравнение комплектов", "Index", "compare")</li>
+						</ul>
+					</div>
+					<div class="col-xl-10" style="margin-bottom:70px">
+						@RenderBody()
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<p>По всем вопросам пишите на &#9993;<b>admin@evs-dev.ru</b></p>
+	</footer>
+</body>
+</html>

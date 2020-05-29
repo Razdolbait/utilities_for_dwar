@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DWAR2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ElementSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PetSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Element_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ElementPet">
+          <End Role="ElementSet" Type="Self.ElementSet" Multiplicity="1" />
+          <End Role="PetSet" Type="Self.PetSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ElementSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PetSet">
+              <PropertyRef Name="Element_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DWAR2ModelStoreContainer">
+          <EntitySet Name="ElementSet" EntityType="Self.ElementSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PetSet" EntityType="Self.PetSet" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ElementPet" Association="Self.FK_ElementPet">
+            <End Role="ElementSet" EntitySet="ElementSet" />
+            <End Role="PetSet" EntitySet="PetSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DWAR2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ElementSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PetSet" Relationship="Self.FK_ElementPet" FromRole="ElementSet" ToRole="PetSet" />
+        </EntityType>
+        <EntityType Name="PetSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Element_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ElementSet" Relationship="Self.FK_ElementPet" FromRole="PetSet" ToRole="ElementSet" />
+        </EntityType>
+        <Association Name="FK_ElementPet">
+          <End Role="ElementSet" Type="Self.ElementSet" Multiplicity="1" />
+          <End Role="PetSet" Type="Self.PetSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ElementSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PetSet">
+              <PropertyRef Name="Element_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DWAR2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ElementSet" EntityType="Self.ElementSet" />
+          <EntitySet Name="PetSet" EntityType="Self.PetSet" />
+          <AssociationSet Name="FK_ElementPet" Association="Self.FK_ElementPet">
+            <End Role="ElementSet" EntitySet="ElementSet" />
+            <End Role="PetSet" EntitySet="PetSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DWAR2ModelStoreContainer" CdmEntityContainer="DWAR2Entities">
+          <EntitySetMapping Name="ElementSet">
+            <EntityTypeMapping TypeName="DWAR2Model.ElementSet">
+              <MappingFragment StoreEntitySet="ElementSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PetSet">
+            <EntityTypeMapping TypeName="DWAR2Model.PetSet">
+              <MappingFragment StoreEntitySet="PetSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Element_Id" ColumnName="Element_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

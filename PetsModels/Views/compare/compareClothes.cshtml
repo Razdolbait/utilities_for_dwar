@@ -1,0 +1,502 @@
+﻿@model PetsModels.Models.CompareTempClothes
+<div class="container-fluid">
+	<div class="row mb-4 align-content-stretch">
+		<div class="col-md-8">
+			@using (Ajax.BeginForm("compare", new AjaxOptions { UpdateTargetId = "results" }))
+			{
+				<div class="row">
+					<div class="col-4 p-0">
+						<div class="font-weight-bold h43" style="height: 44px;">
+							<div class="col-12">
+								Доспехи
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								Шлем:
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								Наручи:
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								Наплечники:
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								Кольчуга:
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								Сапоги:
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								Основное оружие:
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								Дополнительное оружие:
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								Поножи:
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								Броня:
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								Лук:
+							</div>
+						</div>
+					</div>
+					<div class="col-4 p-0 text-center">
+						<div class="font-weight-bold h43" style="height: 44px;">
+							<div class="col-12">Комплект 1</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("helmet1", new SelectList(Model.Helmet.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("bangle1", new SelectList(Model.Bangle.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("shoulders1", new SelectList(Model.Shoulders.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("hauberk1", new SelectList(Model.Hauberk.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("boots1", new SelectList(Model.Boots.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("mWeapon1", new SelectList(Model.MWeapon.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { id = "mWeapon1", @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("aWeapon1", new SelectList(Model.AWeapon.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { id = "aWeapon1", @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("pants1", new SelectList(Model.Pants.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("armor1", new SelectList(Model.Armor.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("bow1", new SelectList(Model.Bow.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+					</div>
+					<div class="col-4 p-0 text-center">
+						<div class="h43 font-weight-bold" style="height: 44px;">
+							<div class="col-12">Комплект 2</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("helmet2", new SelectList(Model.Helmet.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("bangle2", new SelectList(Model.Bangle.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("shoulders2", new SelectList(Model.Shoulders.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("hauberk2", new SelectList(Model.Hauberk.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("boots2", new SelectList(Model.Boots.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("mWeapon2", new SelectList(Model.MWeapon.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { id = "mWeapon2", @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("aWeapon2", new SelectList(Model.AWeapon.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { id = "aWeapon2", @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("pants2", new SelectList(Model.Pants.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("armor2", new SelectList(Model.Armor.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+						<div class="h43">
+							<div class="col-12">
+								@Html.DropDownList("bow2", new SelectList(Model.Bow.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row mb-4 mt-4">
+					<div class="col-lg-4 col-md-6 col-sm-8"><input type="submit" value="Сравнить" class="btn btn-outline-success btn-block" /></div>
+				</div>
+			}
+		</div>
+		<div class="col-md-4 col-12" id="results">
+			<div class="row">
+				<div class="col-6 p-0">
+					<div class="h21 font-weight-bold justify-content-center">
+						<div>Характеристики</div>
+					</div>
+					<div class="h21">
+						<div>Ловкость</div>
+					</div>
+					<div class="h21">
+						<div>Защита</div>
+					</div>
+					<div class="h21">
+						<div>Инициатива</div>
+					</div>
+					<div class="h21">
+						<div>Интуиция</div>
+					</div>
+					<div class="h21">
+						<div>Интелект</div>
+					</div>
+					<div class="h21">
+						<div>Сила</div>
+					</div>
+					<div class="h21">
+						<div>Живучесть</div>
+					</div>
+					<div class="h21">
+						<div>Мудрость</div>
+					</div>
+					<div class="h21">
+						<div>Уровень жизни</div>
+					</div>
+					<div class="h21">
+						<div>Уровень маны</div>
+					</div>
+					<div class="h21">
+						<div>Защита огонь-воздух</div>
+					</div>
+					<div class="h21">
+						<div>Защита свет-тьма</div>
+					</div>
+					<div class="h21">
+						<div>Защита земля-вода</div>
+					</div>
+					<div class="h21">
+						<div>Мин. маг. урон</div>
+					</div>
+					<div class="h21">
+						<div>Макс. маг. урон</div>
+					</div>
+					<div class="h21">
+						<div>Мин. физ. урон</div>
+					</div>
+					<div class="h21">
+						<div>Макс. физ. урон</div>
+					</div>
+					<div class="h21">
+						<div>Антитравматизм</div>
+					</div>
+					<div class="h21">
+						<div>Травматизм</div>
+					</div>
+					<div class="h21">
+						<div>Стойкость</div>
+					</div>
+					<div class="h21">
+						<div>Проницание</div>
+					</div>
+					<div class="h21">
+						<div>Скорость</div>
+					</div>
+				</div>
+				<div class="col-2 p-0 text-center">
+					<div class="h21 font-weight-bold justify-content-center">
+						<div class="col-12">Левый</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+				</div>
+				<div class="col-2 p-0 text-center">
+					<div class="h21 font-weight-bold justify-content-center">
+						<div class="col-12">Разница</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+				</div>
+				<div class="col-2 p-0 text-center">
+					<div class="h21 font-weight-bold justify-content-center">
+						<div class="col-12">Правый</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">0</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function () {
+		$("#mWeapon1").change(function ()
+		{
+			var mw = $(this).val();
+			$.ajax({
+				type: 'GET',
+				url: '@Url.Action("GetAW1", new { mWeapon = "mWeapon1" })'.replace("mWeapon1", mw),
+				success: function (data) {
+					$('#aWeapon1').replaceWith(data);
+				},
+				error: (error) => {
+					console.log(JSON.stringify(error));
+				}
+			});
+		});
+		$("#mWeapon2").change(function ()
+		{
+			var mw = $(this).val();
+			$.ajax({
+				type: 'GET',
+				url: '@Url.Action("GetAW2", new { mWeapon = "mWeapon2" })'.replace("mWeapon2", mw),
+				success: function (data) {
+					$('#aWeapon2').replaceWith(data);
+				},
+				error: (error) => {
+					console.log(JSON.stringify(error));
+				}
+			});
+		});
+	});
+</script>

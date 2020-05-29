@@ -1,0 +1,218 @@
+﻿@model PetsModels.Models.DRPers
+<div id="runes_frames" class="p-0">
+	<div class="row">
+		<div class="col-4 p-0 text-center">
+			<div class="font-weight-bold h43" style="height: 44px;">
+				<div class="col-12">
+					Доспехи
+				</div>
+			</div>
+			<div class="h43">
+				<div class="col-12">
+					<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+						 src=@Html.DisplayFor(p => p.Clothes.Helmet.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Helmet.LINK)', '',
+						 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+						 title="@Html.DisplayFor(p => p.Clothes.Helmet.NAME)">
+				</div>
+			</div>
+			<div class="h43">
+				<div class="col-12">
+					<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+						 src=@Html.DisplayFor(p => p.Clothes.Bangle.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Bangle.LINK)', '',
+						 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+						 title="@Html.DisplayFor(p => p.Clothes.Bangle.NAME)">
+				</div>
+			</div>
+			<div class="h43">
+				<div class="col-12">
+					<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+						 src=@Html.DisplayFor(p => p.Clothes.Shoulders.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Shoulders.LINK)', '',
+						 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+						 title="@Html.DisplayFor(p => p.Clothes.Shoulders.NAME)">
+				</div>
+			</div>
+			<div class="h43">
+				<div class="col-12">
+					<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+						 src=@Html.DisplayFor(p => p.Clothes.Hauberk.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Hauberk.LINK)', '',
+						 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+						 title="@Html.DisplayFor(p => p.Clothes.Hauberk.NAME)">
+				</div>
+			</div>
+			<div class="h43">
+				<div class="col-12">
+					<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+						 src=@Html.DisplayFor(p => p.Clothes.Boots.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Boots.LINK)', '',
+						 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+						 title="@Html.DisplayFor(p => p.Clothes.Boots.NAME)">
+				</div>
+			</div>
+			<div class="h43">
+				<div class="col-12">
+					<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+						 src=@Html.DisplayFor(p => p.Clothes.MWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.MWeapon.LINK)', '',
+						 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+						 title="@Html.DisplayFor(p => p.Clothes.MWeapon.NAME)">
+				</div>
+			</div>
+			<div class="h43">
+				<div class="col-12">
+					<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+						 src=@Html.DisplayFor(p => p.Clothes.AWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.AWeapon.LINK)', '',
+						 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+						 title="@Html.DisplayFor(p => p.Clothes.AWeapon.NAME)">
+				</div>
+			</div>
+			<div class="h43">
+				<div class="col-12">
+					<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+						 src=@Html.DisplayFor(p => p.Clothes.Pants.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Pants.LINK)', '',
+						 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+						 title="@Html.DisplayFor(p => p.Clothes.Pants.NAME)">
+				</div>
+			</div>
+			<div class="h43">
+				<div class="col-12">
+					<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+						 src=@Html.DisplayFor(p => p.Clothes.Armor.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Armor.LINK)', '',
+						 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+						 title="@Html.DisplayFor(p => p.Clothes.Armor.NAME)">
+				</div>
+			</div>
+			<div class="h43">
+				<div class="col-12">
+					<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+						 src=@Html.DisplayFor(p => p.Clothes.Bow.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Bow.LINK)', '',
+						 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+						 title="@Html.DisplayFor(p => p.Clothes.Bow.NAME)">
+				</div>
+			</div>
+		</div>
+		<div class="col-8">
+			@using (Ajax.BeginForm("ViewResult", new AjaxOptions { UpdateTargetId = "result" }))
+			{
+			<div class="row mr-2">
+				<div class="col-6 p-0 text-center">
+					<div class="font-weight-bold h43" style="height: 44px;">
+						<div class="col-12">
+							Руны
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("helmetR", new SelectList(Model.TempRunes.Helmet.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("bangleR", new SelectList(Model.TempRunes.Bangle.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("shouldersR", new SelectList(Model.TempRunes.Shoulders.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("hauberkR", new SelectList(Model.TempRunes.Hauberk.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("bootsR", new SelectList(Model.TempRunes.Boots.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("mWeaponR", new SelectList(Model.TempRunes.MWeapon.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("aWeaponR", new SelectList(Model.TempRunes.AWeapon.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("pantsR", new SelectList(Model.TempRunes.Pants.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("armorR", new SelectList(Model.TempRunes.Armor.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("bowR", new SelectList(Model.TempRunes.Bow.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+				</div>
+				<div class="col-6 p-0 text-center">
+					<div class="font-weight-bold h43" style="height: 44px;">
+						<div class="col-12">
+							Оправы
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("helmetF", new SelectList(Model.TempFrames.Helmet.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("bangleF", new SelectList(Model.TempFrames.Bangle.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("shouldersF", new SelectList(Model.TempFrames.Shoulders.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("hauberkF", new SelectList(Model.TempFrames.Hauberk.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("bootsF", new SelectList(Model.TempFrames.Boots.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("mWeaponF", new SelectList(Model.TempFrames.MWeapon.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("aWeaponF", new SelectList(Model.TempFrames.AWeapon.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("pantsF", new SelectList(Model.TempFrames.Pants.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("armorF", new SelectList(Model.TempFrames.Armor.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							@Html.DropDownList("bowF", new SelectList(Model.TempFrames.Bow.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+						</div>
+					</div>
+					<div class="row mb-4 mt-4">
+						<div class="col-12">
+							<input type="submit" value="Результат" class="btn btn-outline-success btn-block" />
+						</div>
+					</div>
+				</div>
+			</div>
+			}
+		</div>
+	</div>
+</div>

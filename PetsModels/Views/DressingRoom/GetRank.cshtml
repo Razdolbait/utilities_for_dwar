@@ -1,0 +1,10 @@
+﻿@section metatags
+{
+	<meta name="robots" content="noindex">
+}
+<select id="rank" name="rank">
+	@foreach (var item in Model)
+	{
+		<option value="@item.Id">@item.NAME</option>
+	}
+</select>

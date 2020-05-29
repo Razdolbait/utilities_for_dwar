@@ -1,0 +1,478 @@
+﻿@model PetsModels.Models.DRPers
+<div id="result">
+	<div class="row">
+		<div class="col-lg-9 col-12 p-0">
+			<div class="row">
+				<div class="col-3 p-0">
+					<div class="font-weight-bold h43" style="height: 44px;">
+						<div class="col-12">
+
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							Шлем:
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							Наручи:
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							Наплечники:
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							Кольчуга:
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							Сапоги:
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							Основное оружие:
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							Дополнительное оружие:
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							Поножи:
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							Броня:
+						</div>
+					</div>
+					<div class="h43">
+						<div class="col-12">
+							Лук:
+						</div>
+					</div>
+				</div>
+				<div class="col-9 p-0" id="runes_frames">
+					<div class="row">
+						<div class="col-4 p-0 text-center">
+							<div class="font-weight-bold h43" style="height: 44px;">
+								<div class="col-12">
+									Доспехи
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Clothes.Helmet.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Helmet.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Clothes.Helmet.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Clothes.Bangle.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Bangle.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Clothes.Bangle.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Clothes.Shoulders.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Shoulders.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Clothes.Shoulders.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Clothes.Hauberk.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Hauberk.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Clothes.Hauberk.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Clothes.Boots.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Boots.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Clothes.Boots.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Clothes.MWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.MWeapon.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Clothes.MWeapon.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Clothes.AWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.AWeapon.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Clothes.AWeapon.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Clothes.Pants.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Pants.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Clothes.Pants.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Clothes.Armor.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Armor.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Clothes.Armor.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Clothes.Bow.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Bow.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Clothes.Bow.NAME)">
+								</div>
+							</div>
+						</div>
+						<div class="col-4 p-0 text-center">
+							<div class="font-weight-bold h43" style="height: 44px;">
+								<div class="col-12">
+									Руны
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Runes.Helmet.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Helmet.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Runes.Helmet.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Runes.Bangle.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Bangle.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Runes.Bangle.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Runes.Shoulders.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Shoulders.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Runes.Shoulders.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Runes.Hauberk.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Hauberk.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Runes.Hauberk.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Runes.Boots.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Boots.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Runes.Boots.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Runes.MWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.MWeapon.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Runes.MWeapon.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Runes.AWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.AWeapon.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Runes.AWeapon.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Runes.Pants.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Pants.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Runes.Pants.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Runes.Armor.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Armor.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Runes.Armor.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Runes.Bow.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Bow.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Runes.Bow.NAME)">
+								</div>
+							</div>
+						</div>
+						<div class="col-4 p-0 text-center">
+							<div class="font-weight-bold h43" style="height: 44px;">
+								<div class="col-12">
+									Оправы
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Frames.Helmet.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Helmet.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Frames.Helmet.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Frames.Bangle.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Bangle.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Frames.Bangle.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Frames.Shoulders.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Shoulders.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Frames.Shoulders.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Frames.Hauberk.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Hauberk.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Frames.Hauberk.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Frames.Boots.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Boots.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Frames.Boots.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Frames.MWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.MWeapon.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Frames.MWeapon.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Frames.AWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.AWeapon.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Frames.AWeapon.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Frames.Pants.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Pants.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Frames.Pants.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Frames.Armor.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Armor.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Frames.Armor.NAME)">
+								</div>
+							</div>
+							<div class="h43">
+								<div class="col-12">
+									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
+										 src=@Html.DisplayFor(p => p.Frames.Bow.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Bow.LINK)', '',
+										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+										 title="@Html.DisplayFor(p => p.Frames.Bow.NAME)">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-12 p-0" id="results">
+			<div class="row">
+				<div class="col-9 p-0">
+					<div class="h21 font-weight-bold justify-content-center">
+						<div>Характеристики</div>
+					</div>
+					<div class="h21">
+						<div>Ловкость</div>
+					</div>
+					<div class="h21">
+						<div>Защита</div>
+					</div>
+					<div class="h21">
+						<div>Инициатива</div>
+					</div>
+					<div class="h21">
+						<div>Интуиция</div>
+					</div>
+					<div class="h21">
+						<div>Интелект</div>
+					</div>
+					<div class="h21">
+						<div>Сила</div>
+					</div>
+					<div class="h21">
+						<div>Живучесть</div>
+					</div>
+					<div class="h21">
+						<div>Мудрость</div>
+					</div>
+					<div class="h21">
+						<div>Уровень жизни</div>
+					</div>
+					<div class="h21">
+						<div>Уровень маны</div>
+					</div>
+					<div class="h21">
+						<div>Защита огонь-воздух</div>
+					</div>
+					<div class="h21">
+						<div>Защита свет-тьма</div>
+					</div>
+					<div class="h21">
+						<div>Защита земля-вода</div>
+					</div>
+					<div class="h21">
+						<div>Мин. маг. урон</div>
+					</div>
+					<div class="h21">
+						<div>Макс. маг. урон</div>
+					</div>
+					<div class="h21">
+						<div>Мин. физ. урон</div>
+					</div>
+					<div class="h21">
+						<div>Макс. физ. урон</div>
+					</div>
+					<div class="h21">
+						<div>Антитравматизм</div>
+					</div>
+					<div class="h21">
+						<div>Травматизм</div>
+					</div>
+					<div class="h21">
+						<div>Стойкость</div>
+					</div>
+					<div class="h21">
+						<div>Проницание</div>
+					</div>
+					<div class="h21">
+						<div>Скорость</div>
+					</div>
+				</div>
+				<div class="col-3 p-0 text-center">
+					<div class="h21 font-weight-bold justify-content-center">
+						<div class="col-12">Значение</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Agility</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Defense</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Initiative</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Intuition</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Intelligence</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Strength</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Vitality</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Wisdom</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Health</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Mana</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.FAprot</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.LDprot</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.EWprot</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.MinMD</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.MaxMD</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.MinPD</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.MaxPD</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Antitraumatism</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Traumatism</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Stamina</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Insight</div>
+					</div>
+					<div class="h21">
+						<div class="col-12">@Model.Stats.Speed</div>
+					</div>
+				</div>
+			</div>
+			@Html.ActionLink("В начало", "Index", "DressingRoom", new { @class = "btn btn-outline-success btn-block" })
+		</div>
+	</div>
+</div>

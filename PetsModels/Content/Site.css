@@ -1,0 +1,48 @@
+﻿
+body {
+	height: 100%;
+	padding-bottom: 50px;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background: #39b54a;
+	border-top: solid 1px #eee;
+}
+	/* additional demo styles */
+	.footer p {
+		margin-top: 10px;
+	}
+.h43 {
+	height: 43px;
+	line-height: 1;
+	display: flex;
+	border-style: solid;
+	border-color: silver;
+	border-width: 1px 0px;
+}
+
+	.h43 div {
+		align-self: center;
+	}
+
+.h21 {
+	height: 21px;
+	line-height: 1;
+	border-style: solid;
+	border-color: silver;
+	border-width: 1px 0px;
+	display: flex;
+	font-size: 0.7em;
+}
+
+	.h21 div {
+		align-self: center;
+	}
+
+.DDL {
+	font-size: 0.9em;
+}

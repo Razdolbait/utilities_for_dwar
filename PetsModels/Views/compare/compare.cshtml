@@ -1,0 +1,289 @@
+﻿@model PetsModels.Models.ComparePerksView
+<div id="results">
+	<div class="row">
+		<div class="col-6 p-0">
+			<div class="h21 font-weight-bold justify-content-center">
+				<div>Характеристики</div>
+			</div>
+			<div class="h21">
+				<div>Ловкость</div>
+			</div>
+			<div class="h21">
+				<div>Защита</div>
+			</div>
+			<div class="h21">
+				<div>Инициатива</div>
+			</div>
+			<div class="h21">
+				<div>Интуиция</div>
+			</div>
+			<div class="h21">
+				<div>Интелект</div>
+			</div>
+			<div class="h21">
+				<div>Сила</div>
+			</div>
+			<div class="h21">
+				<div>Живучесть</div>
+			</div>
+			<div class="h21">
+				<div>Мудрость</div>
+			</div>
+			<div class="h21">
+				<div>Уровень жизни</div>
+			</div>
+			<div class="h21">
+				<div>Уровень маны</div>
+			</div>
+			<div class="h21">
+				<div>Защита огонь-воздух</div>
+			</div>
+			<div class="h21">
+				<div>Защита свет-тьма</div>
+			</div>
+			<div class="h21">
+				<div>Защита земля-вода</div>
+			</div>
+			<div class="h21">
+				<div>Мин. маг. урон</div>
+			</div>
+			<div class="h21">
+				<div>Макс. маг. урон</div>
+			</div>
+			<div class="h21">
+				<div>Мин. физ. урон</div>
+			</div>
+			<div class="h21">
+				<div>Макс. физ. урон</div>
+			</div>
+			<div class="h21">
+				<div>Антитравматизм</div>
+			</div>
+			<div class="h21">
+				<div>Травматизм</div>
+			</div>
+			<div class="h21">
+				<div>Стойкость</div>
+			</div>
+			<div class="h21">
+				<div>Проницание</div>
+			</div>
+			<div class="h21">
+				<div>Скорость</div>
+			</div>
+		</div>
+		<div class="col-2 p-0 text-center">
+			<div class="h21 font-weight-bold justify-content-center">
+				<div class="col-12">Левый</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Agility</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Defense</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Initiative</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Intuition</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Intelligence</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Strength</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Vitality</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Wisdom</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Health</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Mana</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.FAprot</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.LDprot</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.EWprot</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.MinMD</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.MaxMD</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.MinPD</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.MaxPD</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Antitraumatism</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Traumatism</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Stamina</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Insight</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks1.Speed</div>
+			</div>
+		</div>
+		<div class="col-2 p-0 text-center">
+			<div class="h21 font-weight-bold justify-content-center">
+				<div class="col-12">Разница</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Agility</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Defense</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Initiative</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Intuition</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Intelligence</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Strength</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Vitality</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Wisdom</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Health</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Mana</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.FAprot</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.LDprot</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.EWprot</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.MinMD</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.MaxMD</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.MinPD</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.MaxPD</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Antitraumatism</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Traumatism</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Stamina</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Insight</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.PerksRazn.Speed</div>
+			</div>
+		</div>
+		<div class="col-2 p-0 text-center">
+			<div class="h21 font-weight-bold justify-content-center">
+				<div class="col-12">Правый</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Agility</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Defense</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Initiative</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Intuition</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Intelligence</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Strength</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Vitality</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Wisdom</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Health</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Mana</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.FAprot</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.LDprot</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.EWprot</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.MinMD</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.MaxMD</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.MinPD</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.MaxPD</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Antitraumatism</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Traumatism</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Stamina</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Insight</div>
+			</div>
+			<div class="h21">
+				<div class="col-12">@Model.Perks2.Speed</div>
+			</div>
+		</div>
+	</div>
+</div>

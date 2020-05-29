@@ -1,0 +1,3 @@
+﻿SELECT SUM(Agility) as a, SUM(Defense) AS d, SUM(Initiative) AS ini, SUM(Intuition) AS intu, Sum(Intelligence) AS Intel, SUM(Strength) AS Stre, SUM(Vitality) AS Vit, Sum(Wisdom) AS Wis,
+SUM(Health) AS he, SUM(Mana) AS Mana, SUM(FAprot) AS FA, SUM(LDprot) AS LD, SUM(EWprot) AS EW, SUM(MinMD) AS MinMD, SUM(MaxMD) AS MaxMD, SUM(MinPD) AS MinPD, SUM(MaxPD) AS MAxPD,
+SUM(Antitraumatism) AS Anti, SUM(Traumatism) AS Traum, Sum(Stamina) AS Stam, SUM(Insight) AS Ins, SUM(Speed) AS Speed FROM DRItems WHERE Suite = 26 AND Color = 3 AND (Slot<10 OR Slot = 109)

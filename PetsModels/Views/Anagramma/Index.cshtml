@@ -1,0 +1,69 @@
+﻿@model List<Anagramma.DICTSet>
+@{
+				/**/
+
+				ViewBag.Title = "Решение анаграмм, генератор слов - Легенда: Наследие Драконов";
+}
+@section metatags
+{
+	<meta name="Description" content="Дварограмма - решение анаграмм и поиск слов из онлайн игры Двар - Легенда: Наследие Драконов" />
+	<meta name="Keywords" content="Дварограмма анаграмма балагуры легенда двар dwar" />
+}
+<h1 style="font-size:30px; text-align:center; margin-bottom:50px">Дварограмма</h1>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xl-6 col-lg-8">
+			@using (Html.BeginForm("Index", "Anagramma", FormMethod.Post))
+			{
+				<div class="row mb-4">
+					<div class="col-3">Введите строку:</div>
+					<div class="col-9">@Html.TextBox("SearchString")</div>
+				</div>
+				<div class="row mb-4">
+					<div class="col-3">Режим поиска:</div>
+					<div class="col-9">
+						<div class="mb-4">@Html.RadioButton("mode", 1, true)Анаграмма - слово, образованное путём перестановки букв.</div>
+						<div class="mb-4">@Html.RadioButton("mode", 2)Поиск по маске. Неизвестные буквы замените знаком *</div>
+						<div class="mb-4">@Html.RadioButton("mode", 3)Генератор слов. Слова, образованные из всех или нескольких букв исходного. Используются только первые 15 букв строки.</div>
+					</div>
+				</div>
+				<div class="row mb-4">
+					<div class="col-3">Фильтр:</div>
+					<div class="col-9">@Html.DropDownList("category", ViewBag.Cat as List<SelectListItem>)</div>
+				</div>
+				<div class="row mb-4">
+					<div class="col-lg-4 col-md-6 col-sm-8"><input type="submit" value="Поиск" class="btn  btn-outline-success btn-block" /></div>
+				</div>
+			}
+		</div>
+	</div>
+	<div class="row">
+
+	</div>
+</div>
+@{ int k = 999;}
+<ol class="words">
+	@for (int i = 0; i < Model.Count(); i++)
+	{
+		if (Model[i].NAME.Length < k)
+		{
+			<div style='clear:both; font-weight:bold;'>Букв: @Model[i].NAME.Length</div>
+			k = Model[i].NAME.Length;
+		}
+		<li><span class="strong2">@Html.DisplayFor(modelItem => Model[i].NAME)</span></li>
+	}
+</ol>
+<style>
+	OL.words {
+		float: left;
+		margin: 0;
+		margin-left: 34px;
+		padding: 0;
+	}
+	.words li {
+		float: left;
+		width: 17em;
+		margin: 0;
+		padding: 0;
+	}
+</style>

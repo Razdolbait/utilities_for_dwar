@@ -1,0 +1,10 @@
+﻿@section metatags
+{
+	<meta name="robots" content="noindex">
+}
+<select id="aWeapon1" name="aWeapon1" class="btn-block DDL">
+	@foreach (var item in Model)
+	{
+		<option value="@item.Id">@item.NAME</option>
+	}
+</select>

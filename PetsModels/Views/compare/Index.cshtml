@@ -1,0 +1,56 @@
+﻿
+@{
+	ViewBag.Title = "Сравнение комплектов - Легенда: Наследие Драконов";
+}
+@section metatags
+{
+	<meta name="Description" content="Сравнение. Подбор комплектов. Характеристики персонажа. Двар - Легенда: Наследие Драконов" />
+	<meta name="Keywords" content="сравнение подбор комплекты характеристики легенда двар dwar" />
+}
+<h1 style="font-size:30px; text-align:center; margin-bottom:50px">Сравнение комплектов</h1>
+<p>Сравниваются только характеристики вещей. Руны, оправы, скрижали и ювелирка не учитываются<br />Бонусы комплектов учитываются</p>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-4 col-md-6 col-sm-8">
+			@using (Ajax.BeginForm("compareClothes", new AjaxOptions { UpdateTargetId = "clothes" }))
+			{
+				<div class="row mb-4">
+					<div class="col-6">Уровень персонажа:</div>
+					<div class="col-6">@Html.DropDownList("lvl", ViewBag.Lvl as SelectList, new { id = "lvls" })</div>
+				</div>
+				<div class="row mb-4">
+					<div class="col-6">Звание:</div>
+					<div class="col-6">@Html.DropDownList("rank", ViewBag.Dobls as SelectList, new { id = "rank" })</div>
+				</div>
+				<div class="row mb-4">
+					<input type="submit" value="Показать" class="btn btn-outline-success btn-block" />
+				</div>
+			}
+		</div>
+	</div>
+	<div id="clothes">
+	</div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#lvls').change(function()
+        {
+            var lvls = $(this).val();
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("GetRank", new { lvls = "LVLS"})'.replace("LVLS",lvls),
+                success: function (data) {
+                    $('#rank').replaceWith(data);
+				},
+				 error: (error) => {
+					console.log(JSON.stringify(error));
+				}
+            });
+        });
+	})
+	$(function () {
+		$('form').submit(function () {
+			$(this).find(':input[type=submit]').attr('disabled', 'disabled');
+		});
+	});
+</script>

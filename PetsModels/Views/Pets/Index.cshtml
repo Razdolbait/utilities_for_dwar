@@ -1,0 +1,137 @@
+﻿@model List<Pets.PetsReit>
+@{
+	ViewBag.Title = "Рейтинг питомцев - Легенда: Наследие Драконов";
+}
+@section metatags
+{
+	<meta name="Description" content="Рейтинг питомцев, талисманы, способности, репутация егеря. Двар - Легенда: Наследие Драконов" />
+	<meta name="Keywords" content="питомцы талисманы способности репутации егеря легенда двар dwar" />
+}
+	<h1 style="font-size:30px; text-align:center; margin-bottom:50px">Рейтинг питомцев</h1>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xl-4 col-lg-6 col-md-8">
+			@using (Html.BeginForm("Index", "Pets", FormMethod.Post))
+			{
+				<div class="row mb-4">
+					<div class="col-6">Уровень питомца:</div>
+					<div class="col-6">@Html.DropDownList("lvl", ViewBag.Lvls as List<SelectListItem>)</div>
+				</div>
+				<div class="row mb-4">
+					<div class="col-6">Цвет:</div>
+					<div class="col-6">@Html.DropDownList("color", ViewBag.Colors as List<SelectListItem>)</div>
+				</div>
+				<div class="row mb-4">
+					<div class="col-6">Сортировать по:</div>
+					<div class="col-6">@Html.DropDownList("sort", ViewBag.Sort as List<SelectListItem>)</div>
+				</div>
+				<div class="row mb-4">
+					<div class="col"><input type="submit" value="Применить фильтр" class="btn btn-outline-success btn-block" /></div>
+				</div>
+			}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xl-11 col-lg-11">
+			<table class="table-striped">
+				<thead  class="text-center">
+					<tr>
+						<th>#</th>
+						<th colspan="2">Питомец</th>
+						<th style="padding: 0px 10px">Класс</th>
+						<th style="padding: 0px 10px">Слот&#160;1</th>
+						<th style="padding: 0px 10px">Слот&#160;2</th>
+						<th style="padding: 0px 10px">Слот&#160;3</th>
+						<th style="padding: 0px 10px">Слот&#160;4</th>
+						<th style="padding: 0px 5px">Трава</th>
+						<th style="padding: 0px 5px">Камни</th>
+						<th style="padding: 0px 5px">Рыба</th>
+						<th style="padding: 0px 5px">Снаряжение</th>
+						<th style="padding: 0px 5px">Талисманы</th>
+						<th style="padding: 0px 5px">Ценности</th>
+						<th style="padding: 0px 5px">Где&#160;взять</th>
+					</tr>
+				</thead>
+				<tbody >
+					@{ int i = 1;}
+					@foreach (var item in Model)
+					{
+						<tr>
+							<td class="font-weight-bold" style="font-size:12px">@(i++)</td>
+							<td class="font-italic" style="text-align:center; padding: 0px 5px">
+								@Html.DisplayFor(modelItem => item.Name)
+							</td>
+							<td style="padding: 0px 5px">
+								<img style="position: relative; display: inline-block; width: 60px; height: 60px; cursor: pointer;
+								vertical-align: bottom; margin: 1px;"
+								src=@Html.DisplayFor(modelItem => item.ICON)
+								onclick="window.open('@Html.DisplayFor(modelItem =>item.LINK)','',
+								'width=780,height=400,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+								title="@Html.DisplayFor(modelItem => item.Name)"><br>
+							</td>
+							<td align="center">
+								<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; 
+								vertical-align: bottom; margin: 1px;"
+								src=@Html.DisplayFor(modelItem => item.Elements.ElementIcon) 
+								onclick="window.open('@Html.DisplayFor(modelItem =>item.Elements.ElementLink)','',
+								'width=680,height=460,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+								title="@Html.DisplayFor(modelItem => item.Elements.ElementName)">
+							</td>
+							<td align="center">
+								@if (item.Slot1.Link != "")
+								{<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer;
+								vertical-align: bottom; margin: 1px;"
+								src=@Html.DisplayFor(modelItem => item.Slot1.Icon)
+								onclick="window.open('@Html.DisplayFor(modelItem => item.Slot1.Link)','',
+								'width=680,height=500,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+								title="@Html.DisplayFor(modelItem => item.Slot1.Name)">}
+								else
+								{}
+							</td>
+							<td align="center">
+								@if (item.Slot2.Link != "")
+								{<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer;
+								vertical-align: bottom; margin: 1px;"
+								src=@Html.DisplayFor(modelItem => item.Slot2.Icon)
+								onclick="window.open('@Html.DisplayFor(modelItem => item.Slot2.Link)','',
+								'width=680,height=500,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+								title="@Html.DisplayFor(modelItem => item.Slot2.Name)">}
+								else
+								{}
+							</td>
+							<td align="center">
+								@if (item.Slot3.Link != "")
+								{<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer;
+								vertical-align: bottom; margin: 1px;"
+								src=@Html.DisplayFor(modelItem => item.Slot3.Icon)
+								onclick="window.open('@Html.DisplayFor(modelItem => item.Slot3.Link)','',
+								'width=680,height=500,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+								title="@Html.DisplayFor(modelItem => item.Slot3.Name)">}
+								else
+								{}
+							</td>
+							<td align="center">
+								@if (item.Slot4.Link != "")
+								{<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer;
+								vertical-align: bottom; margin: 1px;"
+								src=@Html.DisplayFor(modelItem => item.Slot4.Icon)
+								onclick="window.open('@Html.DisplayFor(modelItem => item.Slot4.Link)','',
+								'width=680,height=500,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
+								title="@Html.DisplayFor(modelItem => item.Slot4.Name)">}
+								else
+								{}
+							</td>
+							<td class="text-center text-primary">@Html.DisplayFor(modelItem => item.Grass)</td>
+							<td class="text-center text-primary">@Html.DisplayFor(modelItem => item.Stone)</td>
+							<td class="text-center text-primary">@Html.DisplayFor(modelItem => item.Fish)</td>
+							<td class="text-center text-primary">@Html.DisplayFor(modelItem => item.ESearch)</td>
+							<td class="text-center text-primary">@Html.DisplayFor(modelItem => item.TSearch)</td>
+							<td class="text-center text-primary">@Html.DisplayFor(modelItem => item.WSearch)</td>
+							<td style="font-size:14px">@Html.DisplayFor(modelItem => item.DESCRIPTION)</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
