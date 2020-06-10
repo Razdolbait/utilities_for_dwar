@@ -10,7 +10,7 @@ namespace PetsModels.Controllers
     public class compareController : Controller
     {
 		// GET: compare
-		DressingRoom dbDR = new DressingRoom();
+		DressingRoomOld dbDR = new DressingRoomOld();
 		int selectedIndex = 1;
 		ComparePerksView pers = new ComparePerksView();
 		private void Create()

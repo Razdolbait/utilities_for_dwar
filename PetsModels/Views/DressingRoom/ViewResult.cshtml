@@ -1,4 +1,4 @@
-﻿@model PetsModels.Models.DRPers
+﻿@model DressingRoom.DRPers
 <div id="result">
 	<div class="row">
 		<div class="col-lg-9 col-12 p-0">
@@ -71,7 +71,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Clothes.Helmet.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Helmet.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Clothes.Helmet.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Helmet.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Clothes.Helmet.NAME)">
 								</div>
@@ -79,7 +79,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Clothes.Bangle.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Bangle.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Clothes.Bangle.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Bangle.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Clothes.Bangle.NAME)">
 								</div>
@@ -87,7 +87,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Clothes.Shoulders.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Shoulders.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Clothes.Shoulders.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Shoulders.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Clothes.Shoulders.NAME)">
 								</div>
@@ -95,7 +95,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Clothes.Hauberk.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Hauberk.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Clothes.Hauberk.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Hauberk.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Clothes.Hauberk.NAME)">
 								</div>
@@ -103,7 +103,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Clothes.Boots.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Boots.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Clothes.Boots.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Boots.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Clothes.Boots.NAME)">
 								</div>
@@ -111,7 +111,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Clothes.MWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.MWeapon.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Clothes.MWeapon.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Clothes.MWeapon.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Clothes.MWeapon.NAME)">
 								</div>
@@ -119,7 +119,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Clothes.AWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.AWeapon.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Clothes.AWeapon.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Clothes.AWeapon.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Clothes.AWeapon.NAME)">
 								</div>
@@ -127,7 +127,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Clothes.Pants.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Pants.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Clothes.Pants.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Pants.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Clothes.Pants.NAME)">
 								</div>
@@ -135,7 +135,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Clothes.Armor.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Armor.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Clothes.Armor.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Armor.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Clothes.Armor.NAME)">
 								</div>
@@ -143,7 +143,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Clothes.Bow.ICON) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Bow.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Clothes.Bow.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Clothes.Bow.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Clothes.Bow.NAME)">
 								</div>
@@ -158,7 +158,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Runes.Helmet.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Helmet.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Runes.Helmet.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Runes.Helmet.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Runes.Helmet.NAME)">
 								</div>
@@ -166,7 +166,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Runes.Bangle.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Bangle.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Runes.Bangle.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Runes.Bangle.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Runes.Bangle.NAME)">
 								</div>
@@ -174,7 +174,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Runes.Shoulders.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Shoulders.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Runes.Shoulders.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Runes.Shoulders.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Runes.Shoulders.NAME)">
 								</div>
@@ -182,7 +182,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Runes.Hauberk.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Hauberk.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Runes.Hauberk.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Runes.Hauberk.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Runes.Hauberk.NAME)">
 								</div>
@@ -190,7 +190,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Runes.Boots.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Boots.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Runes.Boots.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Runes.Boots.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Runes.Boots.NAME)">
 								</div>
@@ -198,7 +198,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Runes.MWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.MWeapon.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Runes.MWeapon.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Runes.MWeapon.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Runes.MWeapon.NAME)">
 								</div>
@@ -206,7 +206,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Runes.AWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.AWeapon.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Runes.AWeapon.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Runes.AWeapon.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Runes.AWeapon.NAME)">
 								</div>
@@ -214,7 +214,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Runes.Pants.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Pants.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Runes.Pants.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Runes.Pants.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Runes.Pants.NAME)">
 								</div>
@@ -222,7 +222,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Runes.Armor.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Armor.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Runes.Armor.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Runes.Armor.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Runes.Armor.NAME)">
 								</div>
@@ -230,7 +230,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Runes.Bow.ICON) onclick="window.open('@Html.DisplayFor(p => p.Runes.Bow.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Runes.Bow.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Runes.Bow.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Runes.Bow.NAME)">
 								</div>
@@ -245,7 +245,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Frames.Helmet.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Helmet.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Frames.Helmet.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Frames.Helmet.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Frames.Helmet.NAME)">
 								</div>
@@ -253,7 +253,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Frames.Bangle.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Bangle.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Frames.Bangle.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Frames.Bangle.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Frames.Bangle.NAME)">
 								</div>
@@ -261,7 +261,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Frames.Shoulders.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Shoulders.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Frames.Shoulders.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Frames.Shoulders.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Frames.Shoulders.NAME)">
 								</div>
@@ -269,7 +269,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Frames.Hauberk.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Hauberk.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Frames.Hauberk.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Frames.Hauberk.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Frames.Hauberk.NAME)">
 								</div>
@@ -277,7 +277,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Frames.Boots.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Boots.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Frames.Boots.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Frames.Boots.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Frames.Boots.NAME)">
 								</div>
@@ -285,7 +285,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Frames.MWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.MWeapon.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Frames.MWeapon.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Frames.MWeapon.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Frames.MWeapon.NAME)">
 								</div>
@@ -293,7 +293,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Frames.AWeapon.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.AWeapon.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Frames.AWeapon.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Frames.AWeapon.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Frames.AWeapon.NAME)">
 								</div>
@@ -301,7 +301,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Frames.Pants.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Pants.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Frames.Pants.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Frames.Pants.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Frames.Pants.NAME)">
 								</div>
@@ -309,7 +309,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Frames.Armor.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Armor.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Frames.Armor.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Frames.Armor.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Frames.Armor.NAME)">
 								</div>
@@ -317,7 +317,7 @@
 							<div class="h43">
 								<div class="col-12">
 									<img style="position: relative; display: inline-block; width: 40px; height: 40px; cursor: pointer; vertical-align: bottom; margin: 1px;"
-										 src=@Html.DisplayFor(p => p.Frames.Bow.ICON) onclick="window.open('@Html.DisplayFor(p => p.Frames.Bow.LINK)', '',
+										 src=@Html.DisplayFor(p => p.Frames.Bow.IconPath) onclick="window.open('@Html.DisplayFor(p => p.Frames.Bow.Link)', '',
 										 'width=700,height=875,location=yes,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');return false;"
 										 title="@Html.DisplayFor(p => p.Frames.Bow.NAME)">
 								</div>

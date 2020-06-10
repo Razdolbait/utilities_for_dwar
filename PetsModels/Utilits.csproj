@@ -600,7 +600,7 @@
     <Compile Include="Models\CompareTempClothes.cs" />
     <Compile Include="Models\DRBonus.cs" />
     <Compile Include="Models\DRDobl.cs" />
-    <Compile Include="Models\DressingRoom.cs" />
+    <Compile Include="Models\DressingRoomOld.cs" />
     <Compile Include="Models\DRItems.cs" />
     <Compile Include="Models\DRPers .cs" />
     <Compile Include="Models\PerksVM.cs" />
@@ -645,6 +645,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
@@ -665,6 +666,10 @@
     <ProjectReference Include="..\Anagramma\Anagramma.csproj">
       <Project>{8095170d-51e4-45cb-b12f-4ec28334ee97}</Project>
       <Name>Anagramma</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DressingRoom\DressingRoom.csproj">
+      <Project>{7651c572-fa27-4916-90d4-771b59d34bb3}</Project>
+      <Name>DressingRoom</Name>
     </ProjectReference>
     <ProjectReference Include="..\Pets\Pets.csproj">
       <Project>{CD8500E4-965C-4552-8235-93DF2E217D18}</Project>

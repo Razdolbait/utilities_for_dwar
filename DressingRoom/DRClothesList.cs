@@ -15,6 +15,7 @@ namespace DressingRoom
 		public List<DRItemView> Bangle { get; private set; }
 		public List<DRItemView> Helmet { get; private set; }
 		public List<DRItemView> Bow { get; private set; }
+		private int iconSize = 16;
 
 		public DRClothesList (int _lvl, int _rank)
 		{
@@ -32,70 +33,80 @@ namespace DressingRoom
 				{
 					Id = c.Id,
 					NAME = c.NAME,
-					ICON = c.ICON,
+					IconSize = iconSize,
+					IconPath = c.ICON,
 					Color = c.Color
 				}).ToList();
 				Pants = CList.Where(c => c.Slot == 2 || c.Id == 1).Select(c => new DRItemView
 				{
 					Id = c.Id,
 					NAME = c.NAME,
-					ICON = c.ICON,
+					IconSize = iconSize,
+					IconPath = c.ICON,
 					Color = c.Color
 				}).ToList();
 				MWeapon = CList.Where(c => c.Slot == 3 || c.Id == 1).Select(c => new DRItemView
 				{
 					Id = c.Id,
 					NAME = c.NAME,
-					ICON = c.ICON,
+					IconSize = iconSize,
+					IconPath = c.ICON,
 					Color = c.Color
 				}).ToList();
 				AWeapon = CList.Where(c => c.Id == 1).Select(c => new DRItemView
 				{
 					Id = c.Id,
 					NAME = c.NAME,
-					ICON = c.ICON,
+					IconSize = iconSize,
+					IconPath = c.ICON,
 					Color = c.Color
 				}).ToList();
 				Boots = CList.Where(c => c.Slot == 5 || c.Id == 1).Select(c => new DRItemView
 				{
 					Id = c.Id,
 					NAME = c.NAME,
-					ICON = c.ICON,
+					IconSize = iconSize,
+					IconPath = c.ICON,
 					Color = c.Color
 				}).ToList();
 				Hauberk = CList.Where(c => c.Slot == 6 || c.Id == 1).Select(c => new DRItemView
 				{
 					Id = c.Id,
 					NAME = c.NAME,
-					ICON = c.ICON,
+					IconSize = iconSize,
+					IconPath = c.ICON,
 					Color = c.Color
 				}).ToList();
 				Shoulders = CList.Where(c => c.Slot == 7 || c.Id == 1).Select(c => new DRItemView
 				{
 					Id = c.Id,
 					NAME = c.NAME,
-					ICON = c.ICON,
+					IconSize = iconSize,
+					IconPath = c.ICON,
 					Color = c.Color
 				}).ToList();
 				Bangle = CList.Where(c => c.Slot == 8 || c.Id == 1).Select(c => new DRItemView
 				{
 					Id = c.Id,
 					NAME = c.NAME,
-					ICON = c.ICON,
+					IconSize = iconSize,
+					IconPath = c.ICON,
 					Color = c.Color
 				}).ToList();
 				Helmet = CList.Where(c => c.Slot == 9 || c.Id == 1).Select(c => new DRItemView
 				{
 					Id = c.Id,
 					NAME = c.NAME,
-					ICON = c.ICON,
+					IconSize = iconSize,
+					IconPath = c.ICON,
 					Color = c.Color
 				}).ToList();
 				Bow = CList.Where(c => c.Slot == 10 || c.Id == 1).Select(c => new DRItemView
 				{
 					Id = c.Id,
 					NAME = c.NAME,
-					ICON = c.ICON,
+					IconSize = iconSize,
+					IconPath = c.ICON,
 					Color = c.Color
 				}).ToList();
 				CList = null;
@@ -108,56 +119,64 @@ namespace DressingRoom
 		{
 			using (Model dbItems = new Model())
 			{
-				List<DRItems> items = dbItems.DRItems.Where(c => c.Lvl <= _lvl && c.Rank <= _rank && c.Type > 20 && c.Type <= 30).ToList();
-				Armor = items.Where(c => c.Slot == 1
-					 && c.LvlSet <= dbItems.DRItems.Where(a => a.Id == _clothes.Armor.Id).Select(a => a.LvlSet).FirstOrDefault()
-					 && c.Style == dbItems.DRItems.Where(b => b.Id == _clothes.Armor.Id).Select(b => b.Style).FirstOrDefault()
-					 || c.Id == 1).Select(c => new DRItemView
+				List<DRItems> items = dbItems.DRItems.Where(c => c.Lvl <= _lvl && c.Rank <= _rank && c.Type > 20 && c.Type <= 30 || c.Id == 1).ToList();
+				int tempLvlSet;
+				int tempStyle;
+
+				tempLvlSet = dbItems.DRItems.Where(a => a.Id == _clothes.Armor.Id).Select(a => a.LvlSet).Single();
+				tempStyle = dbItems.DRItems.Where(b => b.Id == _clothes.Armor.Id).Select(b => b.Style).Single();
+				Armor = items.Where(c => c.Slot == 1 && c.LvlSet <= tempLvlSet && c.Style == tempStyle || c.Id == 1).Select(c => new DRItemView
 					 {
 						 Id = c.Id,
 						 NAME = c.NAME,
-						 ICON = c.ICON,
+						 Link = c.LINK,
+						 IconSize = iconSize,
+						 IconPath = c.ICON,
 						 Color = c.Color
 					 }).ToList();
-				Pants = items.Where(c => c.Slot == 2
-					&& c.LvlSet <= dbItems.DRItems.Where(a => a.Id == _clothes.Pants.Id).Select(a => a.LvlSet).FirstOrDefault()
-					&& c.Style == dbItems.DRItems.Where(b => b.Id == _clothes.Pants.Id).Select(b => b.Style).FirstOrDefault()
-					|| c.Id == 1).Select(c => new DRItemView
+				tempLvlSet = dbItems.DRItems.Where(a => a.Id == _clothes.Pants.Id).Select(a => a.LvlSet).Single();
+				tempStyle = dbItems.DRItems.Where(b => b.Id == _clothes.Pants.Id).Select(b => b.Style).Single();
+				Pants = items.Where(c => c.Slot == 2 && c.LvlSet <= tempLvlSet && c.Style == tempStyle || c.Id == 1).Select(c => new DRItemView
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						Link = c.LINK,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
-				MWeapon = items.Where(c => c.Slot == 3
-					&& c.LvlSet <= dbItems.DRItems.Where(a => a.Id == _clothes.MWeapon.Id).Select(a => a.LvlSet).FirstOrDefault()
-					&& c.Style == dbItems.DRItems.Where(b => b.Id == _clothes.MWeapon.Id).Select(b => b.Style).FirstOrDefault()
-					|| c.Id == 1).Select(c => new DRItemView
+				tempLvlSet = dbItems.DRItems.Where(a => a.Id == _clothes.MWeapon.Id).Select(a => a.LvlSet).Single();
+				tempStyle = dbItems.DRItems.Where(b => b.Id == _clothes.MWeapon.Id).Select(b => b.Style).FirstOrDefault();
+				MWeapon = items.Where(c => c.Slot == 3	&& c.LvlSet <= tempLvlSet && c.Style == tempStyle	|| c.Id == 1).Select(c => new DRItemView
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						Link = c.LINK,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
-				AWeapon = items.Where(c => c.Slot == 4
-					&& c.LvlSet <= dbItems.DRItems.Where(a => a.Id == _clothes.AWeapon.Id).Select(a => a.LvlSet).FirstOrDefault()
-					&& c.Style == dbItems.DRItems.Where(b => b.Id == _clothes.AWeapon.Id).Select(b => b.Style).FirstOrDefault()
-					|| c.Id == 1).Select(c => new DRItemView
+				tempLvlSet = dbItems.DRItems.Where(a => a.Id == _clothes.AWeapon.Id).Select(a => a.LvlSet).FirstOrDefault();
+				tempStyle = dbItems.DRItems.Where(b => b.Id == _clothes.AWeapon.Id).Select(b => b.Style).FirstOrDefault();
+				AWeapon = items.Where(c => c.Slot == 4	&& c.LvlSet <= tempLvlSet && c.Style == tempStyle || c.Id == 1).Select(c => new DRItemView
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						Link = c.LINK,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
 				if (_clothes.Boots.Id != 1)
 				{
-					Boots = items.Where(c => c.Slot == 5
-						&& c.LvlSet <= dbItems.DRItems.Where(a => a.Id == _clothes.Boots.Id).Select(a => a.LvlSet).FirstOrDefault()
-						|| c.Id == 1).Select(c => new DRItemView
+					tempLvlSet = dbItems.DRItems.Where(a => a.Id == _clothes.Boots.Id).Select(a => a.LvlSet).FirstOrDefault();
+					Boots = items.Where(c => c.Slot == 5 && c.LvlSet <= tempLvlSet	|| c.Id == 1).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).ToList();
 				}
@@ -165,57 +184,64 @@ namespace DressingRoom
 				{
 					Id = c.Id,
 					NAME = c.NAME,
-					ICON = c.ICON,
+					Link = c.LINK,
+					IconSize = iconSize,
+					IconPath = c.ICON,
 					Color = c.Color
 				}).ToList();
-				Hauberk = items.Where(c => c.Slot == 6
-					&& c.LvlSet <= dbItems.DRItems.Where(a => a.Id == _clothes.Hauberk.Id).Select(a => a.LvlSet).FirstOrDefault()
-					&& c.Style == dbItems.DRItems.Where(b => b.Id == _clothes.Hauberk.Id).Select(b => b.Style).FirstOrDefault()
-					|| c.Id == 1).Select(c => new DRItemView
+				tempLvlSet = dbItems.DRItems.Where(a => a.Id == _clothes.Hauberk.Id).Select(a => a.LvlSet).FirstOrDefault();
+				tempStyle = dbItems.DRItems.Where(b => b.Id == _clothes.Hauberk.Id).Select(b => b.Style).FirstOrDefault();
+				Hauberk = items.Where(c => c.Slot == 6 && c.LvlSet <= tempLvlSet && c.Style == tempStyle || c.Id == 1).Select(c => new DRItemView
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						Link = c.LINK,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
-				Shoulders = items.Where(c => c.Slot == 7
-					&& c.LvlSet <= dbItems.DRItems.Where(a => a.Id == _clothes.Shoulders.Id).Select(a => a.LvlSet).FirstOrDefault()
-					&& c.Style == dbItems.DRItems.Where(b => b.Id == _clothes.Shoulders.Id).Select(b => b.Style).FirstOrDefault()
-					|| c.Id == 1).Select(c => new DRItemView
+				tempLvlSet = dbItems.DRItems.Where(a => a.Id == _clothes.Shoulders.Id).Select(a => a.LvlSet).FirstOrDefault();
+				tempStyle = dbItems.DRItems.Where(b => b.Id == _clothes.Shoulders.Id).Select(b => b.Style).FirstOrDefault();
+				Shoulders = items.Where(c => c.Slot == 7 && c.LvlSet <= tempLvlSet && c.Style == tempStyle	|| c.Id == 1).Select(c => new DRItemView
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						Link = c.LINK,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
-				Bangle = items.Where(c => c.Slot == 8
-					&& c.LvlSet <= dbItems.DRItems.Where(a => a.Id == _clothes.Bangle.Id).Select(a => a.LvlSet).FirstOrDefault()
-					&& c.Style == dbItems.DRItems.Where(b => b.Id == _clothes.Bangle.Id).Select(b => b.Style).FirstOrDefault()
-					|| c.Id == 1).Select(c => new DRItemView
+				tempLvlSet = dbItems.DRItems.Where(a => a.Id == _clothes.Bangle.Id).Select(a => a.LvlSet).FirstOrDefault();
+				tempStyle = dbItems.DRItems.Where(b => b.Id == _clothes.Bangle.Id).Select(b => b.Style).FirstOrDefault();
+				Bangle = items.Where(c => c.Slot == 8 && c.LvlSet <= tempLvlSet && c.Style == tempStyle || c.Id == 1).Select(c => new DRItemView
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						Link = c.LINK,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
-				Helmet = items.Where(c => c.Slot == 9
-					&& c.LvlSet <= dbItems.DRItems.Where(a => a.Id == _clothes.Helmet.Id).Select(a => a.LvlSet).FirstOrDefault()
-					&& c.Style == dbItems.DRItems.Where(b => b.Id == _clothes.Helmet.Id).Select(b => b.Style).FirstOrDefault()
-					|| c.Id == 1).Select(c => new DRItemView
+				tempLvlSet = dbItems.DRItems.Where(a => a.Id == _clothes.Helmet.Id).Select(a => a.LvlSet).FirstOrDefault();
+				tempStyle = dbItems.DRItems.Where(b => b.Id == _clothes.Helmet.Id).Select(b => b.Style).FirstOrDefault();
+				Helmet = items.Where(c => c.Slot == 9 && c.LvlSet <= tempLvlSet	&& c.Style == tempStyle	|| c.Id == 1).Select(c => new DRItemView
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						Link = c.LINK,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
-				Bow = items.Where(c => c.Slot == 10
-					&& c.LvlSet <= dbItems.DRItems.Where(a => a.Id == _clothes.Bow.Id).Select(a => a.LvlSet).FirstOrDefault()
-					&& c.Style == dbItems.DRItems.Where(b => b.Id == _clothes.Bow.Id).Select(b => b.Style).FirstOrDefault()
-					|| c.Id == 1).Select(c => new DRItemView
+				tempLvlSet = dbItems.DRItems.Where(a => a.Id == _clothes.Bow.Id).Select(a => a.LvlSet).FirstOrDefault();
+				tempStyle = dbItems.DRItems.Where(b => b.Id == _clothes.Bow.Id).Select(b => b.Style).FirstOrDefault();
+				Bow = items.Where(c => c.Slot == 10	&& c.LvlSet <= tempLvlSet && c.Style == tempStyle || c.Id == 1).Select(c => new DRItemView
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						Link = c.LINK,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
 			}
@@ -224,12 +250,12 @@ namespace DressingRoom
 		{
 			using (Model dbItems = new Model())
 			{
-				List<DRItems> items = dbItems.DRItems.Where(c => c.Lvl <= _lvl && c.Rank <= _rank && c.Type > 30 && c.Type <= 40).ToList();
+				List<DRItems> items = dbItems.DRItems.Where(c => c.Lvl <= _lvl && c.Rank <= _rank && c.Type > 30 && c.Type <= 40 || c.Id == 1).ToList();
 				List<DRItemView> emptyList = items.Where(c => c.Id == 1).Select(c => new DRItemView
 				{
 					Id = c.Id,
 					NAME = c.NAME,
-					ICON = c.ICON,
+					IconPath = c.ICON,
 					Color = c.Color
 				}).ToList();
 				if (_clothes.Armor.Id != 1)
@@ -238,7 +264,8 @@ namespace DressingRoom
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
 				}
@@ -249,7 +276,8 @@ namespace DressingRoom
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
 				}
@@ -261,7 +289,8 @@ namespace DressingRoom
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
 				AWeapon = emptyList;
@@ -271,7 +300,8 @@ namespace DressingRoom
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
 				if (_clothes.Hauberk.Id != 1)
@@ -280,7 +310,8 @@ namespace DressingRoom
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
 				}
@@ -291,7 +322,8 @@ namespace DressingRoom
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
 				}
@@ -302,7 +334,8 @@ namespace DressingRoom
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
 				}
@@ -313,7 +346,8 @@ namespace DressingRoom
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
 				}
@@ -324,7 +358,8 @@ namespace DressingRoom
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						IconSize = iconSize,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
 				}

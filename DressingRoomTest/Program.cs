@@ -10,7 +10,8 @@ namespace DressingRoomTest
 		static void Main(string[] args)
 		{
 			Console.WriteLine("DressingRoomTest");
-			DRPers testPers = new DRPers(11, 12);
+			DRPers testPers = new DRPers();
+			testPers.PersInitial(11, 12);
 			testPers.ClothesSet(307, 308, 245, 0, 246, 247, 248, 249, 250, 667);
 			/*Random rnd = new Random();
 			int[] rand = new int[10];

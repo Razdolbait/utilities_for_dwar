@@ -1,4 +1,4 @@
-﻿@model PetsModels.Models.DRPers
+﻿@model DressingRoom.DRPers
 <div class="container-fluid">
 	<div class="row mb-4 align-content-stretch">
 		<div class="col-12" id="result">
@@ -75,52 +75,52 @@
 										</div>
 										<div class="h43">
 											<div class="col-12">
-												@Html.DropDownList("helmet", new SelectList(Model.TempClothes.Helmet.Select(x => new {Value = x.Id, Text = x.NAME, Color = x.Color }), "Value", "Text", "Color"), new { @class = "btn-block DDL" })
+												@Html.DropDownList("helmet", new SelectList(Model.ClothesList.Helmet.Select(x => new {Value = x.Id, Text = x.NAME, Color = x.Color }), "Value", "Text", "Color"), new { @class = "btn-block DDL" })
 											</div>
 										</div>
 										<div class="h43">
 											<div class="col-12">
-												@Html.DropDownList("bangle", new SelectList(Model.TempClothes.Bangle.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+												@Html.DropDownList("bangle", new SelectList(Model.ClothesList.Bangle.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
 											</div>
 										</div>
 										<div class="h43">
 											<div class="col-12">
-												@Html.DropDownList("shoulders", new SelectList(Model.TempClothes.Shoulders.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+												@Html.DropDownList("shoulders", new SelectList(Model.ClothesList.Shoulders.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
 											</div>
 										</div>
 										<div class="h43">
 											<div class="col-12">
-												@Html.DropDownList("hauberk", new SelectList(Model.TempClothes.Hauberk.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+												@Html.DropDownList("hauberk", new SelectList(Model.ClothesList.Hauberk.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
 											</div>
 										</div>
 										<div class="h43">
 											<div class="col-12">
-												@Html.DropDownList("boots", new SelectList(Model.TempClothes.Boots.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+												@Html.DropDownList("boots", new SelectList(Model.ClothesList.Boots.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
 											</div>
 										</div>
 										<div class="h43">
 											<div class="col-12">
-												@Html.DropDownList("mWeapon", new SelectList(Model.TempClothes.MWeapon.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { id = "mWeapon", @class = "btn-block DDL" })
+												@Html.DropDownList("mWeapon", new SelectList(Model.ClothesList.MWeapon.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { id = "mWeapon", @class = "btn-block DDL" })
 											</div>
 										</div>
 										<div class="h43">
 											<div class="col-12">
-												@Html.DropDownList("aWeapon", new SelectList(Model.TempClothes.AWeapon.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { id = "aWeapon", @class = "btn-block DDL" })
+												@Html.DropDownList("aWeapon", new SelectList(Model.ClothesList.AWeapon.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { id = "aWeapon", @class = "btn-block DDL" })
 											</div>
 										</div>
 										<div class="h43">
 											<div class="col-12">
-												@Html.DropDownList("pants", new SelectList(Model.TempClothes.Pants.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+												@Html.DropDownList("pants", new SelectList(Model.ClothesList.Pants.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
 											</div>
 										</div>
 										<div class="h43">
 											<div class="col-12">
-												@Html.DropDownList("armor", new SelectList(Model.TempClothes.Armor.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+												@Html.DropDownList("armor", new SelectList(Model.ClothesList.Armor.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
 											</div>
 										</div>
 										<div class="h43">
 											<div class="col-12">
-												@Html.DropDownList("bow", new SelectList(Model.TempClothes.Bow.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
+												@Html.DropDownList("bow", new SelectList(Model.ClothesList.Bow.Select(x => new { Value = x.Id, Text = x.NAME }), "Value", "Text"), new { @class = "btn-block DDL" })
 											</div>
 										</div>
 										<div class="row mb-4 mt-4">

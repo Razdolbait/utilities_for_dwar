@@ -5,8 +5,8 @@ namespace DressingRoom
 {
 	public class DRPers
 	{
-		readonly int Lvl  = 0;
-		readonly int Rank = 0;
+		private int Lvl {get; set; } = 0;
+		private int Rank { get; set; } = 0;
 		public DRClothes Clothes { get; private set; }
 		public DRClothes Runes { get; private set; }
 		public DRClothes Frames { get; set; }
@@ -14,7 +14,11 @@ namespace DressingRoom
 		public DRClothesList ClothesList { get; private set; }
 		public DRClothesList RunesList { get; private set; }
 		public DRClothesList FramesList { get; private set; }
-		public DRPers (int _lvl, int _rank)
+
+		public DRPers()
+		{
+		}
+		public void PersInitial (int _lvl, int _rank)
 		{
 			Lvl = _lvl;
 			Rank = _rank;
@@ -112,7 +116,6 @@ namespace DressingRoom
 			using (Model dbItems = new Model())
 			{
 				return dbItems.DRDobl.Where(r => r.Lvl <= _lvl).ToList();
-
 			}
 		}
 		public List<DRItemView> GetAW (int _mw)
@@ -128,7 +131,7 @@ namespace DressingRoom
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).ToList();
 				}
@@ -138,7 +141,7 @@ namespace DressingRoom
 					{
 						Id = c.Id,
 						NAME = c.NAME,
-						ICON = c.ICON,
+						IconPath = c.ICON,
 						Color = c.Color
 					}).ToList();
 				}

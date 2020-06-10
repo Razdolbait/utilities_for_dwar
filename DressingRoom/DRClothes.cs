@@ -16,6 +16,7 @@ namespace DressingRoom
 		internal int helmet { get; private set; }
 		internal int bow { get; private set; }
 		internal int bonus { get; private set; }
+		private int iconSize = 40;
 
 		public DRItemView Armor
 		{
@@ -24,23 +25,27 @@ namespace DressingRoom
 				using (Model dbItems = new Model())
 				{
 					DRItemView rez = new DRItemView();
-					try
+					if (armor > 1)
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == armor && c.Slot == 1).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
-					catch (System.InvalidOperationException)
+					else
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == 1).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
@@ -55,23 +60,27 @@ namespace DressingRoom
 				using (Model dbItems = new Model())
 				{
 					DRItemView rez = new DRItemView();
-					try
+					if (pants > 1)
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == pants && c.Slot == 2).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
-					catch (System.InvalidOperationException)
+					else
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == 1).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
@@ -86,23 +95,27 @@ namespace DressingRoom
 				using (Model dbItems = new Model())
 				{
 					DRItemView rez = new DRItemView();
-					try
+					if(mWeapon > 1)
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == mWeapon && c.Slot == 3).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
-					catch (System.InvalidOperationException)
+					else
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == 1).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
@@ -117,23 +130,27 @@ namespace DressingRoom
 				using (Model dbItems = new Model())
 				{
 					DRItemView rez = new DRItemView();
-					try
+					if (aWeapon > 1)
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == aWeapon && c.Slot == 4).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
-					catch (System.InvalidOperationException)
+					else
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == 1).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
@@ -148,23 +165,27 @@ namespace DressingRoom
 				using (Model dbItems = new Model())
 				{
 					DRItemView rez = new DRItemView();
-					try
+					if(boots > 1)
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == boots && c.Slot == 5).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
-					catch (System.InvalidOperationException)
+					else
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == 1).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
@@ -179,23 +200,27 @@ namespace DressingRoom
 				using (Model dbItems = new Model())
 				{
 					DRItemView rez = new DRItemView();
-					try
+					if (hauberk > 1)
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == hauberk && c.Slot == 6).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
-					catch (System.InvalidOperationException)
+					else
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == 1).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
@@ -210,23 +235,27 @@ namespace DressingRoom
 				using (Model dbItems = new Model())
 				{
 					DRItemView rez = new DRItemView();
-					try
+					if (shoulders > 1)
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == shoulders && c.Slot == 7).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
-					catch (System.InvalidOperationException)
+					else
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == 1).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
@@ -241,23 +270,27 @@ namespace DressingRoom
 				using (Model dbItems = new Model())
 				{
 					DRItemView rez = new DRItemView();
-					try
+					if(bangle > 1)
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == bangle && c.Slot == 8).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
-					catch (System.InvalidOperationException)
+					else
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == 1).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
@@ -272,23 +305,27 @@ namespace DressingRoom
 				using (Model dbItems = new Model())
 				{
 					DRItemView rez = new DRItemView();
-					try
+					if(helmet > 1)
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == helmet && c.Slot == 9).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
-					catch (System.InvalidOperationException)
+					else
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == 1).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
@@ -303,23 +340,27 @@ namespace DressingRoom
 				using (Model dbItems = new Model())
 				{
 					DRItemView rez = new DRItemView();
-					try
+					if (bow > 1)
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == bow && c.Slot == 10).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
-					catch (System.InvalidOperationException)
+					else
 					{
 						rez = dbItems.DRItems.Where(c => c.Id == 1).Select(c => new DRItemView
 						{
 							Id = c.Id,
 							NAME = c.NAME,
-							ICON = c.ICON,
+							Link = c.LINK,
+							IconSize = iconSize,
+							IconPath = c.ICON,
 							Color = c.Color
 						}).Single();
 					}
